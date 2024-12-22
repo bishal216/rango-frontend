@@ -1,0 +1,176 @@
+/* ========== VARIABLES ========== */
+:root {
+    --background-color: #f4e4c1;
+    /* Light tan, reminiscent of desert sand */
+    --text-color-primary: #4a2c2a;
+    /* Deep brown, representing leather or wood */
+    --text-color-secondary: #a67c52;
+    /* Light brown, complementing the primary text */
+    --border-color: #8b5e3c;
+    /* Medium brown, matching rustic wood textures */
+    --shadow-color: rgba(75, 50, 40, 0.3);
+    /* Dark brown shadow, creating depth */
+    --accent-hover-color: #c1440e;
+    /* Burnt orange, adding a fiery western accent */
+}
+
+
+/* ========== GLOBAL STYLES ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    overflow: hidden;
+    line-height: 1.5;
+}
+
+body {
+    background-color: var(--background-color);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* ========== HEADER ========== */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 12px;
+    padding: 8px;
+    color: var(--text-color-primary);
+}
+
+.header-logo {
+    height: 50px;
+}
+
+/* ========== MAIN ========== */
+main {
+    flex-grow: 1;
+}
+
+.carousel-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 16px;
+    height: 100%;
+}
+
+.carousel {
+    overflow: hidden;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    position: relative;
+}
+
+.carousel-item {
+    position: absolute;
+    font-size: 72px;
+
+    padding: 10px 20px;
+    background-color: var(--background-color);
+    color: var(--text-color-primary);
+    text-align: center;
+    padding: 20px;
+    white-space: nowrap;
+    text-shadow: 0 4px 6px var(--shadow-color);
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease, color 0.3s ease;
+    width: min(90%, 600px);
+    letter-spacing: 1px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.carousel-item:hover {
+    transform: scale(1.05);
+    color: var(--accent-hover-color);
+    color: #fff;
+}
+
+.hover-image {
+    position: absolute;
+    width: min(40%, 600px);
+    height: auto;
+    display: none;
+    bottom: 25%;
+    right: 25%;
+    pointer-events: none;
+    border: 2px solid var(--border-color);
+    box-shadow: 0 4px 6px var(--shadow-color);
+    z-index: 10;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* ========== FOOTER ========== */
+.footer {
+    display: flex;
+    flex-direction: row;
+    height: min(10%, 50px);
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    color: var(--text-color-secondary);
+    padding: 0 min(10%, 32px);
+}
+
+.footer .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.footer a {
+    cursor: pointer;
+    color: var(--text-color-secondary);
+    transition: font-size 0.3s ease, color 0.3s ease;
+}
+
+.footer a:hover {
+    color: var(--accent-hover-color);
+    font-size: 18px;
+}
+
+/* ========== RESPONSIVENESS ========== */
+@media (max-width: 768px) {
+    .carousel {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .carousel-item {
+        width: 100%;
+        /* Adjust width for responsiveness */
+        height: auto;
+        font-size: 18px;
+        line-height: normal;
+        padding: 10px;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+/* ========== DEBUG (REMOVE IN PRODUCTION) ========== */
+.debug {
+    border: 1px solid red;
+}
+
+.debug>* {
+    border: 1px solid green;
+}
+
+.debug>*>* {
+    border: 1px solid blue;
+}
