@@ -9,7 +9,7 @@ const carouselData = [
       "https://www.syfy.com/sites/syfy/files/styles/hero_image__large__computer__alt/public/2021/03/rango-1200-1200-675-675-crop-000000.jpeg",
   },
   {
-    content: "Cartoon Image",
+    content: "NFT Image",
     imageUrl: "https://images5.alphacoders.com/466/466601.jpg",
   },
   {
@@ -116,58 +116,62 @@ function initializePositions(items, itemWidths, reverse = false) {
 // Scroll handling for varying widths
 let isScrolling = false;
 
-carouselContainer.addEventListener("wheel", (e) => {
-  if (isScrolling) return;
+carouselContainer.addEventListener(
+  "wheel",
+  (e) => {
+    if (isScrolling) return;
 
-  isScrolling = true;
-  const direction = e.deltaY > 0 ? -1 : 1;
+    isScrolling = true;
+    const direction = e.deltaY > 0 ? -1 : 1;
 
-  function moveCarousel(items, itemWidths, opposite = false) {
-    const totalWidth = itemWidths.reduce((acc, w) => acc + w.width, 0);
+    function moveCarousel(items, itemWidths, opposite = false) {
+      const totalWidth = itemWidths.reduce((acc, w) => acc + w.width, 0);
 
-    items.forEach((item, index) => {
-      const currentTransform = parseFloat(
-        item.style.transform.replace("translateX(", "").replace("px)", "")
-      );
+      items.forEach((item, index) => {
+        const currentTransform = parseFloat(
+          item.style.transform.replace("translateX(", "").replace("px)", "")
+        );
 
-      const moveBy =
-        direction *
-        (opposite ? -itemWidths[index].width : itemWidths[index].width);
-      let newPosition = currentTransform + moveBy;
+        const moveBy =
+          direction *
+          (opposite ? -itemWidths[index].width : itemWidths[index].width);
+        let newPosition = currentTransform + moveBy;
 
-      // Wrap the item around if it exits the viewport
-      if (newPosition < -itemWidths[index].width) {
-        newPosition += totalWidth;
-      } else if (newPosition >= totalWidth) {
-        newPosition -= totalWidth;
-      }
+        // Wrap the item around if it exits the viewport
+        if (newPosition < -itemWidths[index].width) {
+          newPosition += totalWidth;
+        } else if (newPosition >= totalWidth) {
+          newPosition -= totalWidth;
+        }
 
-      item.style.transform = `translateX(${newPosition}px)`;
+        item.style.transform = `translateX(${newPosition}px)`;
+      });
+    }
+
+    // Get updated widths for both carousels
+    const itemWidths1 = items1.map((item) => ({
+      width:
+        item.offsetWidth +
+        parseInt(getComputedStyle(item).marginLeft) +
+        parseInt(getComputedStyle(item).marginRight),
+    }));
+    const itemWidths2 = items2.map((item) => ({
+      width:
+        item.offsetWidth +
+        parseInt(getComputedStyle(item).marginLeft) +
+        parseInt(getComputedStyle(item).marginRight),
+    }));
+
+    moveCarousel(items1, itemWidths1);
+    moveCarousel(items2, itemWidths2, true);
+
+    // Allow new scroll after animation
+    requestAnimationFrame(() => {
+      isScrolling = false;
     });
-  }
-
-  // Get updated widths for both carousels
-  const itemWidths1 = items1.map((item) => ({
-    width:
-      item.offsetWidth +
-      parseInt(getComputedStyle(item).marginLeft) +
-      parseInt(getComputedStyle(item).marginRight),
-  }));
-  const itemWidths2 = items2.map((item) => ({
-    width:
-      item.offsetWidth +
-      parseInt(getComputedStyle(item).marginLeft) +
-      parseInt(getComputedStyle(item).marginRight),
-  }));
-
-  moveCarousel(items1, itemWidths1);
-  moveCarousel(items2, itemWidths2, true);
-
-  // Allow new scroll after animation
-  requestAnimationFrame(() => {
-    isScrolling = false;
-  });
-});
+  },
+  { passive: true }
+);
 
 // Recalculate on resize
 window.addEventListener("resize", recalculateDimensions);
