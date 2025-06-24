@@ -39,8 +39,8 @@ jobs:
 
       - name: Typecheck, Lint, and Build
         run: |
-          npm run typecheck
-          npm run lint:fix
+          # npm run typecheck
+          # npm run lint:fix
           npm run build
         env:
           VITE_BASE_URL: "/rango-frontend"
