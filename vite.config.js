@@ -6,7 +6,7 @@ import { PrimeVueResolver } from "@primevue/auto-import-resolver";
 import path from "path";
 
 export default defineConfig({
-  base: "/rango-frontend/",
+  base: "/rango-frontend",
   plugins: [
     vue(),
     tailwindcss(),
