@@ -1,16 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <link rel="icon" href="/favicon.ico" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vite App</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meanwhile</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Patrick+Hand&family=Special+Elite&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
+<body>
 
-<body class="bg-surface-50 dark:bg-surface-950 min-h-screen">
-  <div id="app"></div>
-  <script type="module" src="/src/main.js"></script>
+  <div class="masthead">
+  </div>
+
+  <div class="comic-wrapper">
+    <div class="strip-title" id="stripTitle">LOADING…</div>
+    <div class="rule"></div>
+
+    <!-- ── Scene wrap: absorbs flex space, centres the square ── -->
+    <div class="scene-wrap">
+      <div class="scene" id="scene">
+
+        <!-- ↓ Replace src with your panel image when ready -->
+        <img class="panel-img" src="panel1.png" alt="Same Apartment panel">
+
+        <!-- Dynamic speech bubbles -->
+        <div class="bubble maya" id="bubble-maya"></div>
+        <div class="bubble ro"   id="bubble-ro"></div>
+
+        <!-- SFX -->
+        <div class="sfx" id="sfx"></div>
+      </div>
+    </div>
+
+    <!-- Caption -->
+    <div class="caption-bar" id="caption"></div>
+
+    <!-- Navigation -->
+    <div class="controls">
+      <button class="nav-btn" onclick="navigate(-1)">← PREV</button>
+      <span class="counter" id="counter">— / —</span>
+      <button class="nav-btn" onclick="navigate(1)">NEXT →</button>
+    </div>
+
+    <!-- Dots -->
+    <div class="dots" id="dots"></div>
+
+  </div><!-- /comic-wrapper -->
+
+  <div class="footer-bar"></div>
+
+  <script src="app.js"></script>
 </body>
-
 </html>

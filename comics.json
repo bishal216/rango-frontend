@@ -1,0 +1,125 @@
+{
+  "stripTitle": "MEANWHILE",
+  "comics": [
+    {
+      "maya":    "I'm going to start waking up at 6 AM. New me.",
+      "ro":      "Your alarm has been snoozed every day since March.",
+      "sfx":     "",
+      "caption": "Sunday night. The delusion is strong."
+    },
+    {
+      "maya":    "We should really meal prep this week.",
+      "ro":      "You said that last week. And the week before.",
+      "sfx":     "",
+      "caption": "The containers are still in the cabinet."
+    },
+    {
+      "maya":    "Have you tried turning the router off and on?",
+      "ro":      "...",
+      "sfx":     "CLICK",
+      "caption": "She had not tried that."
+    },
+    {
+      "maya":    "Just one more episode.",
+      "ro":      "It's 1 AM. That's what you said at 10.",
+      "sfx":     "",
+      "caption": "Episode 11 of 14."
+    },
+    {
+      "maya":    "I think I'm dying.",
+      "ro":      "You have a cold.",
+      "sfx":     "",
+      "caption": "WebMD had a very different opinion."
+    },
+    {
+      "maya":    "I cleaned the whole apartment.",
+      "ro":      "You moved the clutter to my room.",
+      "sfx":     "",
+      "caption": "Technically not wrong."
+    },
+    {
+      "maya":    "I don't need a jacket. It's not that cold.",
+      "ro":      "It's literally snowing.",
+      "sfx":     "",
+      "caption": "She wore the jacket."
+    },
+    {
+      "maya":    "The plant looks fine to me.",
+      "ro":      "It's been dead for two weeks.",
+      "sfx":     "",
+      "caption": "Neither of them watered it."
+    },
+    {
+      "maya":    "I'll be ready in five minutes.",
+      "ro":      "You're not even dressed.",
+      "sfx":     "",
+      "caption": "Maya time. A parallel dimension."
+    },
+    {
+      "maya":    "I'm on a diet starting tomorrow.",
+      "ro":      "You just finished a whole pizza.",
+      "sfx":     "",
+      "caption": "The 'tomorrow' diet. Very popular."
+    },
+    {
+      "maya":    "I should probably check my bank account.",
+      "ro":      "Last time you said that, you cried.",
+      "sfx":     "",
+      "caption": "Ignorance is financial bliss."
+    },
+    {
+      "maya":    "I'm not lost. I know exactly where we are.",
+      "ro":      "We've passed that same dog three times.",
+      "sfx":     "",
+      "caption": "The dog was starting to recognize them."
+    },
+    {
+      "maya":    "I'll just have one cookie.",
+      "ro":      "That's the entire pack of Oreos.",
+      "sfx":     "CRUNCH",
+      "caption": "She meant one sleeve. Progress?"
+    },
+    {
+      "maya":    "I can totally afford this.",
+      "ro":      "Your card was just declined for coffee.",
+      "sfx":     "",
+      "caption": "The math was not mathing."
+    },
+    {
+      "maya":    "Let's just take a quick nap.",
+      "ro":      "It's 4 PM.",
+      "sfx":     "",
+      "caption": "The 'quick nap' that ends at 9 PM."
+    },
+    {
+      "maya":    "I'm going to return this tomorrow. I swear.",
+      "ro":      "You bought it in 2019.",
+      "sfx":     "",
+      "caption": "It's basically a family heirloom now."
+    },
+    {
+        "maya":    "Do you regret being my friend?",
+        "ro":      "... maybe.",
+        "sfx":     "",
+        "caption": "The most honest comic yet."
+    },
+    {
+        "maya":    "I think I'm going to start a podcast.",
+        "ro":      "You don't even have a microphone.",
+        "sfx":     "",
+        "caption": "The podcast that never was."
+    },
+    {
+        "maya":    "I should probably start going to the gym again.",
+        "ro":      "You haven't been in months.",
+        "sfx":     "",
+        "caption": "The gym membership is still active, though."
+    },
+    {
+        "maya":    "I think I'm going to start a YouTube channel.",
+        "ro":      "You don't even have a camera.",
+        "sfx":     "",
+        "caption": "The YouTube channel that never was."
+    }
+  ]
+}
